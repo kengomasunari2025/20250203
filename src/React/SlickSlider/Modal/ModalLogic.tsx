@@ -4,8 +4,6 @@ const ModalLogic = ({ isOpen, closeModal }: { isOpen: boolean, closeModal: () =>
   useEffect(() => {
     const lightboxBtns = document.querySelectorAll(".lightbox-btn");
     const lightboxCloseBtns = document.querySelectorAll(".lightbox-close-btn");
-
-    // Lightbox button interactions
     lightboxBtns.forEach((btn) => {
       btn.addEventListener("click", () => {
         const lightboxContainer = btn.nextElementSibling;
@@ -14,7 +12,6 @@ const ModalLogic = ({ isOpen, closeModal }: { isOpen: boolean, closeModal: () =>
         }
       });
     });
-
     lightboxCloseBtns.forEach((closeBtn) => {
       closeBtn.addEventListener("click", () => {
         const lightboxContainer = closeBtn.closest(".light-box-popup");
@@ -23,31 +20,24 @@ const ModalLogic = ({ isOpen, closeModal }: { isOpen: boolean, closeModal: () =>
         }
       });
     });
-
-    // Modal scroll prevention and close modal on Escape
     if (isOpen) {
-      document.body.style.overflow = "hidden"; // Prevent scrolling on body
-      document.body.style.position = "fixed"; // Prevent background from scrolling by fixing the body position
-      document.body.style.width = "100%"; // Prevent layout shift caused by overflow hidden
-
+      document.body.style.overflow = "hidden";
+      document.body.style.position = "fixed";
+      document.body.style.width = "100%";
       const handleEscape = (event: KeyboardEvent) => {
         if (event.key === "Escape") {
           closeModal();
         }
       };
-
       document.addEventListener("keydown", handleEscape);
-
       return () => {
         document.removeEventListener("keydown", handleEscape);
-        document.body.style.overflow = ""; // Reset scroll behavior when modal is closed
-        document.body.style.position = ""; // Reset body position
-        document.body.style.width = ""; // Reset width
+        document.body.style.overflow = "";
+        document.body.style.position = "";
+        document.body.style.width = "";
       };
     }
   }, [isOpen, closeModal]);
-
   return null;
 };
-
 export default ModalLogic;
