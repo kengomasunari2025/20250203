@@ -40,7 +40,7 @@ const FirstView = () => {
     <div className="video-container bg-dark" id="top" style={BgOnImages}>
       <div className="overlay-text">
         <h2 className="copy">
-          <p ref={typingElementRef} style={NoBr}>{text}</p>
+          <p className="fw-bold oshare-font" ref={typingElementRef} style={NoBr}>{text}</p>
         </h2>
       </div>
     </div>
