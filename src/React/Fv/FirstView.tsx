@@ -26,19 +26,11 @@ const FirstView = () => {
     Typing("Made By React");
   }, []);
 
-  // const [opacity, setOpacity] = useState(0);
-
-  // useEffect(() => {
-  //   const timer = setTimeout(() => setOpacity(1), 100);
-  //   return () => clearTimeout(timer);
-  // }, []);
-
   const BgOnImages = {
     backgroundImage: `url(${FvImg})`,
     backgroundSize: "cover",
     backgroundPosition: "center",
     opacity: 1,
-    // transition: "opacity 3s ease-in-out",
   };
   const NoBr = {
     whiteSpace: "nowrap",

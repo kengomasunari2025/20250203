@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState } from "react";
 import ModalLogic from "./ModalLogic";
 import ModalImg from "./ModalImg";
 
@@ -10,6 +10,7 @@ const Modal = ({ id }: { id: string | number }) => {
   const closeModal = () => {
     setIsOpen(false);
   };
+  
   return (
     <>
       <ModalLogic isOpen={isOpen} closeModal={closeModal} />

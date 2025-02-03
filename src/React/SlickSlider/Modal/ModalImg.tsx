@@ -44,7 +44,7 @@ const ModalImg = ({ id }: { id: string | number }) => {
   const selectedImage = OpenImages.find((image) => image.id === id);
   return selectedImage ? (
     <img
-      className="light-box-popup-in-img border border-white border-3"
+      className="light-box-popup-in-img border border-white border-3 open-scroll"
       src={selectedImage.open}
       alt="作品表示"
     />
