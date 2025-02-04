@@ -8,8 +8,8 @@ import FirstView from "./Fv/FirstView";
 const Kengo = () => {
   return (
     <div className="bg-white">
-      <Header/>
-      <FirstView/>
+      <Header />
+      <FirstView />
       <SlickSlider />
       <Footer />
     </div>

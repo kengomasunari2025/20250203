@@ -18,5 +18,6 @@ const Titles = [
   { title: "ITカリキュラム 4" },
   { title: "ITカリキュラム 5" },
   { title: "RIBREC LP 2" },
+  { title: "React ポートフォリオ" },
 ];
 export default Titles;

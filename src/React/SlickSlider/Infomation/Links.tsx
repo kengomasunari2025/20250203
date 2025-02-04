@@ -13,5 +13,6 @@ const Links = [
   { link: "https://it-plus.jp/" },
   { link: "https://www.orangegroup.jp/" },
   { link: "https://liberty-bridge.co.jp/lp/ad-001/01/" },
+  { link: "https://kengo-react-portfolio.netlify.app/" },
 ];
 export default Links;
